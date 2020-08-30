@@ -24,8 +24,8 @@ Configuration file can be application.properties or application.yml, looks like 
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/fsu-itec442-ecommerce?characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: Paradise@0
+    username: [username of your DB]
+    password: [password of your DB]
   jpa:
     hibernate:
       ddl-auto: update
