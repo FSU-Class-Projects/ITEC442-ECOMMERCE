@@ -89,6 +89,9 @@ helloworld.html with layout
 </html>
 ```
 
+## Test
+http://localhost:8080/
+
 ### Developer
 | Name | EMAIL |
 | ------ | ------ |
