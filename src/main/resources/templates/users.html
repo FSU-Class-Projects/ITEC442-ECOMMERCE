@@ -4,26 +4,50 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/layouts/layout_main}">
 <head>
+    <script th:src="@{/js/users.js}"></script>
+</head>
 <body>
+<div layout:fragment="main-content" class="container-fluid">
 
-<div layout:fragment="main-content">
-    <p>Users List</p>
-    <table>
-        <tr>
-        <tr>
-            <th>User Name</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr th:each="user : ${users}">
-                <td th:text="${user.username}"></td>
-                <td th:text="${user.firstname}"></td>
-                <td th:text="${user.lastname}"></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Users List</p>
+            <table id="tblUsers">
+                <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.username}"></td>
+                    <td th:text="${user.firstname}"></td>
+                    <td th:text="${user.lastname}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <table id="tblMerchandises">
+                <thead>
+                <tr>
+                    <th>UPC</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
 </div>
 </body>
 </html>

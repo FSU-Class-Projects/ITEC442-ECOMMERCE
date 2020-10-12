@@ -5,6 +5,8 @@ import edu.frostburg.itec442.ecommerce.repository.MerchandiseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MerchandiseService {
 
@@ -18,5 +20,9 @@ public class MerchandiseService {
      */
     public Merchandise save(Merchandise merchandise){
         return merchandiseRepository.save(merchandise);
+    }
+
+    public List<Merchandise> getAll(){
+        return merchandiseRepository.findAll();
     }
 }

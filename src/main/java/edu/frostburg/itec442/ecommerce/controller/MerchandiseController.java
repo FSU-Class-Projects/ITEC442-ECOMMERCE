@@ -5,7 +5,10 @@ import edu.frostburg.itec442.ecommerce.service.MerchandiseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class MerchandiseController {
@@ -26,5 +29,10 @@ public class MerchandiseController {
         merchandiseService.save(merchandise);
 
         return "SUCCESS";
+    }
+
+    @PostMapping("/data/merchandises")
+    public List<Merchandise> getAll(){
+        return merchandiseService.getAll();
     }
 }
